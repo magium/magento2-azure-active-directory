@@ -1,0 +1,24 @@
+{
+  "name": "magium/magento2-azure-active-directory",
+  "description": "Allows admin UI access via Azure's Active Directory",
+  "license": "Apache-2",
+  "authors": [
+    {
+      "name": "Kevin Schroeder",
+      "email": "kschroeder@magiumlib.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Magium\\Magento2\\AzureAD\\": "src"
+    },
+    "files": [
+      "registration.php"
+    ]
+  },
+  "require": {
+    "magium/magento2-configuration-manager-bridge": "dev-master",
+    "magium/active-directory": "^1.0",
+    "magium/magento2-psr7-bridge": "dev-master"
+  }
+}
