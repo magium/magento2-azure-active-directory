@@ -19,6 +19,6 @@
   "require": {
     "magium/magento2-configuration-manager-bridge": "dev-master",
     "magium/active-directory": "^1.0",
-    "magium/magento2-psr7-bridge": "dev-master"
+    "magium/magento2-psr7-bridge": "dev-develop"
   }
 }
