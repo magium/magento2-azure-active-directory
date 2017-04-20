@@ -6,7 +6,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class Auth
 {
-    const CONFIG_ENABLED = 'magium/ad/enabled';
+    const CONFIG_RETURN_URL = 'magium/ad/return_url';
 
     protected $activeDirectory;
     protected $config;
@@ -24,7 +24,7 @@ class Auth
     {
         if ($this->activeDirectory->isEnabled()) {
             $this->activeDirectory->setReturnUrl(
-                $this->config->getValue(self::CONFIG_ENABLED)
+                $this->config->getValue(self::CONFIG_RETURN_URL)
             );
             $this->activeDirectory->authenticate();
         }
