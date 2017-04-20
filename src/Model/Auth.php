@@ -24,7 +24,7 @@ class Auth
     {
         if ($this->activeDirectory->isEnabled()) {
             $this->activeDirectory->setReturnUrl(
-                $this->config->getValue()
+                $this->config->getValue(self::CONFIG_ENABLED)
             );
             $this->activeDirectory->authenticate();
         }
