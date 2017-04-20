@@ -27,11 +27,6 @@
                     <comment><![CDATA[Should the system remap HTTP-based URLs to HTTPS.  Azure Active Directory generally will not redirect to a non-secure URL (except localhost).  Enabling this setting protects against that.]]></comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="return_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Return URL</label>
-                    <comment><![CDATA[The URL that Active Directory will redirect you to.  This should exactly match your applications's redirect URL setting.]]></comment>
-                    <backend_model>Magium\Magento2\AzureAD\Model\Backend\DefaultUrl</backend_model>
-                </field>
             </group>
         </section>
     </system>

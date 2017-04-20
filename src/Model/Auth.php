@@ -2,29 +2,26 @@
 
 namespace Magium\Magento2\AzureAD\Model;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
-
 class Auth
 {
-    const CONFIG_RETURN_URL = 'magium/ad/return_url';
 
     protected $activeDirectory;
-    protected $config;
+    protected $helper;
 
     public function __construct(
         ActiveDirectory $activeDirectory,
-        ScopeConfigInterface $config
+        \Magento\Backend\Helper\Data $helper
     )
     {
         $this->activeDirectory = $activeDirectory;
-        $this->config = $config;
+        $this->helper = $helper;
     }
 
     public function beforeIsLoggedIn()
     {
         if ($this->activeDirectory->isEnabled()) {
             $this->activeDirectory->setReturnUrl(
-                $this->config->getValue(self::CONFIG_RETURN_URL)
+                $this->helper->getHomePageUrl()
             );
             $this->activeDirectory->authenticate();
         }
