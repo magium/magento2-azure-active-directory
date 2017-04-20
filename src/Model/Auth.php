@@ -2,9 +2,10 @@
 
 namespace Magium\Magento2\AzureAD\Model;
 
-
 class Auth
 {
+    const CONFIG_ENABLED = 'magium/ad/enabled';
+
     protected $activeDirectory;
 
     public function __construct(
@@ -16,7 +17,9 @@ class Auth
 
     public function beforeIsLoggedIn()
     {
-        $this->activeDirectory->authenticate();
+        if ($this->activeDirectory->isEnabled()) {
+            $this->activeDirectory->authenticate();
+        }
     }
 
 }

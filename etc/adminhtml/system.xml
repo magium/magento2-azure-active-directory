@@ -10,6 +10,10 @@
             <resource>Magium_Magento2AzureAd::config</resource>
             <group id="ad" translate="label" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Active Directory</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
                 <field id="client_id" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Client ID</label>
                     <comment><![CDATA[You can see how to set this up at <iframe width="560" height="315" src="https://www.youtube.com/embed/9FupzL2XsqA" frameborder="0" allowfullscreen></iframe>]]></comment>
