@@ -4,6 +4,7 @@
         <magium>
             <ad>
                 <enabled>0</enabled>
+                <remap_https>1</remap_https>
             </ad>
         </magium>
     </default>

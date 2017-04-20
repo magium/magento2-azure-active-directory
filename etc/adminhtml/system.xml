@@ -21,6 +21,12 @@
                 <field id="client_secret" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0" >
                     <label>Client Secret</label>
                 </field>
+
+                <field id="remap_https" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Remap HTTPS</label>
+                    <comment><![CDATA[Should the system remap HTTP-based URLs to HTTPS.  Azure Active Directory generally will not redirect to a non-secure URL (except localhost).  Enabling this setting protects against that.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
             </group>
         </section>
     </system>
